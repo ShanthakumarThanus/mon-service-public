@@ -1,0 +1,31 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav, ul {
+   display: flex;
+   list-style-type: none;
+}
+
+li:hover > ul {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+ul ul {
+    display: none;
+    position: absolute; 
+    background-color: #fff; 
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#recherche_conteneur {
+    display: flex;
+    float: right;
+}
