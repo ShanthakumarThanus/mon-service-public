@@ -35,6 +35,12 @@ ul ul {
     border: 1px solid #ccc;
 }
 
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 #recherche_conteneur {
     display: flex;
     float: right;
@@ -43,4 +49,5 @@ ul ul {
 nav > ul > li {
     display: flex;
     padding: 14px;
+    
 }
