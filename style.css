@@ -39,6 +39,7 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
+    /* background: ; */
 }
 
 #recherche_conteneur {
@@ -46,8 +47,23 @@ nav {
     float: right;
 }
 
+nav > ul {
+    display: flex;
+    justify-content: space-between; /* Répartit les éléments principaux de la navbar */
+    width: 100%;                    /* Prend toute la largeur du conteneur */
+    list-style-type: none;          /* Supprime les puces */
+    margin: 0;
+    padding: 0;
+}
+
 nav > ul > li {
     display: flex;
     padding: 14px;
-    
+    justify-content: space-around;
+}
+
+.tableau-de-bord {
+    border-radius: 10px;
+    box-shadow: 1px 5px 5px black;
+    padding: 10px;
 }
