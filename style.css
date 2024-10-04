@@ -19,7 +19,7 @@ a {
 }
 
 li:hover > ul {
-    margin-top: 20px;
+    
     display: block;
 }
 
@@ -39,7 +39,7 @@ nav {
     width: 100%;
     display: flex;
     justify-content: center;
-    /* background: ; */
+    position: relative;
 }
 
 #recherche_conteneur {
@@ -49,21 +49,175 @@ nav {
 
 nav > ul {
     display: flex;
-    justify-content: space-between; /* Répartit les éléments principaux de la navbar */
-    width: 100%;                    /* Prend toute la largeur du conteneur */
-    list-style-type: none;          /* Supprime les puces */
+    justify-content: space-between; 
+    width: 100%;                    
+    list-style-type: none;          
     margin: 0;
     padding: 0;
 }
 
 nav > ul > li {
     display: flex;
-    padding: 14px;
+    padding: 14px 0;
     justify-content: space-around;
+
+    position: relative; /* Ajoutez ceci pour le positionnement des sous-listes */
+    padding: 14px 10px;
+}
+
+nav > ul > li > ul {
+    display: none; 
+    position: absolute; 
+    top: 100%; /* Positionne juste en dessous de l'élément parent */
+    left: 0; /* Aligne la sous-liste à gauche de l'élément parent */
+    background-color: #fff; 
+    padding: 10px; /* Vous pouvez ajuster le padding comme nécessaire */
+    border: 1px solid #ccc;
+    z-index: 10; 
+
+
+    top: 100%; /* Positionne juste en dessous de l'élément parent */
+    left: 0; /* Aligne la sous-liste à gauche de l'élément parent */
+    background-color: #fff; 
+    padding: 10px; /* Vous pouvez ajuster le padding comme nécessaire */
+    border: 1px solid #ccc;
+    z-index: 10; 
+}
+
+nav > ul > li > ul > li {
+    padding: 5px 10px; /* Ajustez ici pour garder l'alignement à gauche */
+    margin: 0; /* Supprimez toute marge */
+    list-style-type: none; /* S'assure qu'il n'y a pas de puces */
 }
 
 .tableau-de-bord {
     border-radius: 10px;
-    box-shadow: 1px 5px 5px black;
-    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    overflow: hidden; 
+    position: relative;
+    width: 70%;
 }
+
+.tableau-de-bord h1 {
+    position: relative;
+    color: white;
+    background-color: rgb(24, 109, 158);
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    padding: 5px 0px 5px 50px; 
+    font-size: 1.2rem;
+    font-weight: 500;
+    z-index: 0;
+}
+
+.tableau-section-1 { 
+    margin: 15px 0px 15px 0px;
+    color: blue;
+}
+
+.tableau-section-2 { 
+    background-color: rgb(234, 243, 243);
+    border-radius: 0px 0px 10px 0px;
+    margin: 0;
+    padding: 15px 0px 30px 15px;
+
+    
+    display: flex;
+    justify-content: space-between; 
+    gap: 15px; 
+}
+
+.tableau-section-2 ul {
+    margin: 0;
+    z-index: 0;
+}
+
+.tableau-section-2 .box1,
+.tableau-section-2 .box2,
+.tableau-section-2 .box3 {
+    display: flex;
+    flex-direction: column;
+    width: 30%; 
+}
+
+.tableau-section-2 .box1 a,
+.tableau-section-2 .box2 a,
+.tableau-section-2 .box3 a {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    text-decoration: none;
+    color: black; 
+}
+
+.tableau-section-2 ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    flex-direction: column;
+}
+
+.tableau-section-2 li {
+    margin: 5px 0; 
+    line-height: 1.5; 
+    display: block;
+}
+
+/* blocs-aside */
+
+.blocs-aside {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.blocs-aside {
+    display: flex; /* Permet aux blocs de s'afficher côte à côte */
+    gap: 20px; /* Ajoute un espacement entre les blocs */
+}
+
+.box1-aside, .box2-aside {
+    background-color: #fff; /* Fond blanc pour le contraste */
+    border-radius: 10px; /* Coins arrondis pour un meilleur aspect visuel */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Ombre douce autour du bloc */
+    flex: 1; /* Permet à chaque bloc de prendre une largeur égale */
+    margin-left: 10px;
+}
+
+.box1-aside h3 {
+    position: relative;
+    color: white;
+    background-color: rgb(24, 109, 158);
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    padding: 5px 0px 5px 50px; 
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    margin-top: 0; /* Supprime la marge supérieure */
+    margin-bottom: 10px;
+}
+
+.box2-aside h3 {
+    position: relative;
+    color: white;
+    background-color: rgb(158, 24, 24);
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+    padding: 5px 0px 5px 50px; 
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    margin-top: 0; /* Supprime la marge supérieure */
+    margin-bottom: 10px;
+}
+
+
+
+
