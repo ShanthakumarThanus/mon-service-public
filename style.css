@@ -18,7 +18,7 @@ a {
     text-decoration: none;
 }
 
-li:hover > ul {
+.ul-nav > li:hover > ul {
     
     display: block;
 }
@@ -40,6 +40,9 @@ nav {
     display: flex;
     justify-content: center;
     position: relative;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,0.23571435410101538) 0%, rgb(255, 255, 255) 50%, rgba(2,0,36,0.23571435410101538) 100%);
+    border-bottom: 0.1rem solid rgb(24, 109, 158);
 }
 
 #recherche_conteneur {
@@ -61,33 +64,38 @@ nav > ul > li {
     padding: 14px 0;
     justify-content: space-around;
 
-    position: relative; /* Ajoutez ceci pour le positionnement des sous-listes */
-    padding: 14px 10px;
+    position: relative; 
+    padding: 14px 100px;
 }
 
 nav > ul > li > ul {
-    display: none; 
+    display: none; /* Par défaut, cache les sous-listes */
     position: absolute; 
-    top: 100%; /* Positionne juste en dessous de l'élément parent */
-    left: 0; /* Aligne la sous-liste à gauche de l'élément parent */
     background-color: #fff; 
-    padding: 10px; /* Vous pouvez ajuster le padding comme nécessaire */
-    border: 1px solid #ccc;
-    z-index: 10; 
-
-
-    top: 100%; /* Positionne juste en dessous de l'élément parent */
-    left: 0; /* Aligne la sous-liste à gauche de l'élément parent */
-    background-color: #fff; 
-    padding: 10px; /* Vous pouvez ajuster le padding comme nécessaire */
-    border: 1px solid #ccc;
-    z-index: 10; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    z-index: 10;  
 }
 
+nav > ul > li:hover > ul {
+    display: block; /* Affiche la sous-liste au survol */
+}
+
+nav > ul > li {
+    position: relative; /* Ajoutez ceci pour que les sous-listes s'affichent correctement */
+}
+
+
 nav > ul > li > ul > li {
-    padding: 5px 10px; /* Ajustez ici pour garder l'alignement à gauche */
-    margin: 0; /* Supprimez toute marge */
-    list-style-type: none; /* S'assure qu'il n'y a pas de puces */
+    padding: 5px 10px; 
+    margin: 0; 
+    list-style-type: none; 
+}
+
+footer {
+    background-color: rgb(4, 162, 253);
+    border-radius: 0px 0px 10px 10px;
+    margin-top: 10px;
 }
 
 .tableau-de-bord {
@@ -178,15 +186,15 @@ section {
 }
 
 .blocs-aside {
-    display: flex; /* Permet aux blocs de s'afficher côte à côte */
-    gap: 20px; /* Ajoute un espacement entre les blocs */
+    display: flex; 
+    gap: 20px; 
 }
 
 .box1-aside, .box2-aside {
-    background-color: #fff; /* Fond blanc pour le contraste */
-    border-radius: 10px; /* Coins arrondis pour un meilleur aspect visuel */
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); /* Ombre douce autour du bloc */
-    flex: 1; /* Permet à chaque bloc de prendre une largeur égale */
+    background-color: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+    flex: 0; 
     margin-left: 10px;
 }
 
@@ -200,7 +208,7 @@ section {
     font-size: 1.2rem;
     font-weight: 500;
 
-    margin-top: 0; /* Supprime la marge supérieure */
+    margin-top: 0; 
     margin-bottom: 10px;
 }
 
@@ -214,10 +222,20 @@ section {
     font-size: 1.2rem;
     font-weight: 500;
 
-    margin-top: 0; /* Supprime la marge supérieure */
+    margin-top: 0; 
     margin-bottom: 10px;
+}
+
+.a-propos {
+    display: flex;
+    background-color: blue;
+    margin: 0;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
 }
 
 
 
-
+.ul-footer {
+    padding: 10px 0px 0px 25px;
+}
