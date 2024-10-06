@@ -4,27 +4,27 @@
 	<meta charset="utf-8">
 	<title>Devoir à la maison</title>
 	<link href="style.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-	<div class="container">
+	<div class="container-fluid">
 		<header>
-			<div>
-				<img src="img/logo_msp_Part.png" width="365" height="73">
+			<div class="col-md-6">
+			  <img src="img/logo_msp_Part.png" width="365" height="73">
 			</div>
-
-			<div role="search" id="recherche_conteneur">
-				<form action="https://mon.service-public.fr/portail/faces/jsp/liste_res_tout.jsp" method="get">
-					<input type="text" name="fullText" id="rechercheInput"value="Rechercher" title="Rechercher">
-					<input type="submit" value="ok" title="Lancer la recherche"   id="ok_recherche">
-				</form>
-			</div>				
+		  
+			<div class="col-md-6 d-flex justify-content-end" role="search" id="recherche_conteneur">
+			  <form action="https://mon.service-public.fr/portail/faces/jsp/liste_res_tout.jsp" method="get">
+				<input type="text" name="fullText" id="rechercheInput" value="Rechercher" title="Rechercher">
+				<input type="submit" value="ok" title="Lancer la recherche" id="ok_recherche">
+			  </form>
+			</div>
 		</header>
-
 		<nav>
-			<ul class="ul-nav">
-				<li><a href="/jsp/en_savoir_plus_mon_tableau_de_bord.jsp">Mon tableau de bord</a>
+			<ul class="nav nav-pills">
+				<li class="nav-item dropdown"><a href="/jsp/en_savoir_plus_mon_tableau_de_bord.jsp" data-bs-toggle="dropdown">Mon tableau de bord</a> 
 					<ul>
 						<li><a href="jsp/mes_liaisons.jsp">&gt; Mes liaisons de comptes</a></li>
 						<li><a href="jsp/mon_calendrier.jsp">&gt; Mon calendrier</a></li>
@@ -32,7 +32,7 @@
 					</ul> 
 					<span class="flecheActive"></span>
 				</li>
-				<li><a href="/jsp/en_savoir_plus_mes_documents.jsp">Mes documents</a>
+				<li class="nav-item dropdown"><a href="/jsp/en_savoir_plus_mes_documents.jsp" data-bs-toggle="dropdown">Mes documents</a>
 					<ul>
 						<li><a href="jsp/msp_documents.jsp">&gt; Mon porte-documents</a></li>
 						<li><a href="jsp/bloc_note.jsp">&gt; Mon bloc-notes</a></li>
@@ -158,5 +158,7 @@
 			</div>
 		</footer>
 	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

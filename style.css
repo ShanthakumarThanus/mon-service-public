@@ -6,6 +6,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 nav, ul {
@@ -47,8 +48,10 @@ nav {
 
 #recherche_conteneur {
     display: flex;
-    float: right;
+    
+    align-items: center; /* Aligne le champ et le bouton au centre */
 }
+
 
 nav > ul {
     display: flex;
@@ -182,11 +185,6 @@ footer {
 section {
     display: flex;
     flex-direction: row;
-
-}
-
-section {
-    display: flex; 
     align-items: flex-start; 
 }
 
@@ -328,6 +326,89 @@ footer  a {
     color: white;
 }
 
+/* responsive mobile*/
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-self: center;
+        flex-wrap: wrap;
+    }
+
+    section {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    main.tableau-de-bord, aside.blocs-aside {
+        width: 100%; 
+        margin: 0; 
+    }
+
+    .tableau-section-2 {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .tableau-section-2 .box1,
+    .tableau-section-2 .box2,
+    .tableau-section-2 .box3 {
+        width: 100%; 
+    }
+
+    .box1-aside, .box2-aside {
+        width: 100%; 
+        margin: 0; 
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #recherche_conteneur {
+        width: 100%; /* Assure que le conteneur de recherche prend toute la largeur */
+        justify-content: space-between; /* Pour aligner le champ de recherche et le bouton */
+        margin-top: 10px; /* Espacement supérieur */
+    }
+
+    #rechercheInput {
+        width: calc(100% - 20px); /* S'assure qu'il prend toute la largeur possible */
+        margin-right: 10px; /* Espacement à droite du champ */
+    }
+
+    #ok_recherche {
+        width: auto; /* Laisse le bouton prendre sa largeur par défaut */
+    }
+}
+
+/* responsive PC */
+
+/* Pour garder le conteneur à droite sur les écrans plus grands */
+@media (min-width: 769px) {
+    #recherche_conteneur {
+        margin-left: auto; /* Pousse le conteneur de recherche à droite */
+    }
+}
+
+/* Supprimer les padding des conteneurs si nécessaire */
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Personnalisation des liens */
+footer a {
+    text-decoration: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.blocs-aside a {
+    text-decoration: none;
+}
 
 
 
