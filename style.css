@@ -23,11 +23,11 @@ a {
     display: block;
 }
 
-ul {
+nav ul {
     list-style: none;
 }
 
-ul ul {
+.ul-nav ul ul {
     display: none;
     position: absolute; 
     background-color: #fff; 
@@ -198,6 +198,11 @@ section {
     margin-left: 10px;
 }
 
+.box2-aside ul {
+    display: flex;
+    flex-direction: column;
+}
+
 .box1-aside h3 {
     position: relative;
     color: white;
@@ -228,14 +233,69 @@ section {
 
 .a-propos {
     display: flex;
-    background-color: blue;
+    justify-content: center;  
+    align-items: center;      
+    background-color: rgb(4, 34, 167);
     margin: 0;
     border-radius: 0px 0px 10px 10px;
     padding: 10px;
 }
 
+.a-propos a {
+    display: inline-block; 
+    color: white;          
+    text-decoration: none; 
+    margin: 0 10px;       
+    text-align: center;     
+}
 
 
 .ul-footer {
     padding: 10px 0px 0px 25px;
 }
+
+footer ul ul {
+    display: block;
+
+    list-style-type: disc; 
+    padding-left: 0px;
+    margin-left: 0px; 
+    
+}
+
+
+footer ul.ul-footer li:first-child span {
+    display: inline-block;
+    float: left; 
+    margin-right: 20px; 
+}
+
+
+footer ul.ul-footer li {
+    margin-right: 30px; 
+}
+
+footer ul.ul-footer li:last-child {
+    margin-right: 0; 
+}
+
+footer p {
+    color: white;
+}
+
+footer li::marker {
+    color: white;
+}
+
+footer  a {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
